@@ -50,4 +50,51 @@ Upload est dans :
 ~/Ressources/qgroundcontrol.qrc/qml/PlanView.qml:251
 Cette fonction sert de check avant de l'envoyer sur le rover
 
+
+MissionController::_convertToMissionItems
+	\-> utilise les données des points QML pou les convertir en class 'MissionItem' pour 	les envoyer par la suite sur le flux
+	passe l'argument 'rgMissionItems' qui sera rempli pour être envoyé sur le flux
+	le 'QObject' demandé en param semble être le vehicule.
+	
 PlanManager::writeMissionItems
+Vehicle::sendMessageOnLinkThreadSafe
+	\-> Envoie les trames
+
+
+
+
+[PlanMasterController::sendToVehicle]TESTING UPLOAD
+[MissionController::sendToVehicle]TESTING UPLOAD [1]
+[MissionController::sendToVehicle]TESTING UPLOAD [3]
+[MissionController::sendItemsToVehicle]TESTING UPLOAD [1]
+[PlanManager::writeMissionItems]TESTING UPLOAD [1]
+	0: 0x7ffd055b76b8
+	1: 0x7ffd055b76b8
+	2: 0x7ffd055b76b8
+	3: 0x7ffd055b76b8
+[PlanManager::_writeMissionItemsWorker]TESTING UPLOAD [1]
+[PlanManager::_writeMissionCount]send message on thread safe [1]
+	 message: 255 | 190 |  | 0x7ffd055b7480 | 1 | 1 | 4 | 0
+[PlanManager::writeMissionItems]TESTING UPLOAD [1]
+[PlanManager::_writeMissionItemsWorker]TESTING UPLOAD [1]
+[PlanManager::_writeMissionCount]send message on thread safe [1]
+	 message: 255 | 190 |  | 0x7ffd055b97d0 | 1 | 1 | 0 | 1
+	 
+	 
+
+[PlanMasterController::sendToVehicle]TESTING UPLOAD 
+[MissionController::sendToVehicle]TESTING UPLOAD [1] 
+[MissionController::sendToVehicle]TESTING UPLOAD [3] 
+[MissionController::sendItemsToVehicle]TESTING UPLOAD [1] 
+[PlanManager::writeMissionItems]TESTING UPLOAD [1] 
+	 0 :  0x7fff244fdf30 
+	 1 :  0x7fff244fdf30 
+	 2 :  0x7fff244fdf30 
+	 3 :  0x7fff244fdf30 
+[PlanManager::_writeMissionItemsWorker]TESTING UPLOAD [1] 
+[PlanManager::_writeMissionCount]send message on thread safe [1] 
+	 message:  255  |  190  |  1  |  0x7fff244fdce0  |  1  |  1  |  4  |  0 
+[PlanManager::writeMissionItems]TESTING UPLOAD [1] 
+[PlanManager::_writeMissionItemsWorker]TESTING UPLOAD [1] 
+[PlanManager::_writeMissionCount]send message on thread safe [1] 
+	 message:  255  |  190  |  1  |  0x7fff245000c0  |  1  |  1  |  0  |  1 
