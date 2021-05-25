@@ -57,28 +57,38 @@ MissionController::_convertToMissionItems
 	le 'QObject' demandé en param semble être le vehicule.
 	
 PlanManager::writeMissionItems
+	-> '_writeMissionItems' il fait une copie interne des points et les supprime par la 	suite.
 Vehicle::sendMessageOnLinkThreadSafe
 	\-> Envoie les trames
 
 
 
 
-[PlanMasterController::sendToVehicle]TESTING UPLOAD
-[MissionController::sendToVehicle]TESTING UPLOAD [1]
-[MissionController::sendToVehicle]TESTING UPLOAD [3]
-[MissionController::sendItemsToVehicle]TESTING UPLOAD [1]
-[PlanManager::writeMissionItems]TESTING UPLOAD [1]
-	0: 0x7ffd055b76b8
-	1: 0x7ffd055b76b8
-	2: 0x7ffd055b76b8
-	3: 0x7ffd055b76b8
-[PlanManager::_writeMissionItemsWorker]TESTING UPLOAD [1]
-[PlanManager::_writeMissionCount]send message on thread safe [1]
-	 message: 255 | 190 |  | 0x7ffd055b7480 | 1 | 1 | 4 | 0
-[PlanManager::writeMissionItems]TESTING UPLOAD [1]
-[PlanManager::_writeMissionItemsWorker]TESTING UPLOAD [1]
-[PlanManager::_writeMissionCount]send message on thread safe [1]
-	 message: 255 | 190 |  | 0x7ffd055b97d0 | 1 | 1 | 0 | 1
+[PlanMasterController::sendToVehicle]TESTING UPLOAD 
+[MissionController::sendToVehicle]TESTING UPLOAD [1] 
+[MissionController::sendToVehicle]TESTING UPLOAD [3] 
+[MissionController::sendItemsToVehicle]TESTING UPLOAD [1] 
+[MissionController::_convertToMissionItems]Convert QMLMissionItems [1]
+	 _convertToMissionItems seqNum:lastSeqNum:command 0 0 "Mission Start"
+	 _convertToMissionItems seqNum:lastSeqNum:command 1 1 "Takeoff"
+	 _convertToMissionItems seqNum:lastSeqNum:command 2 2 "Waypoint"
+	 _convertToMissionItems seqNum:lastSeqNum:command 3 3 "Waypoint"
+[PlanManager::writeMissionItems]TESTING UPLOAD [1] 
+	 0 : 
+		 MissionItem(0x55592579d5b0)
+	 1 : 
+		 MissionItem(0x555925df9870)
+	 2 : 
+		 MissionItem(0x5559220dd800)
+	 3 : 
+		 MissionItem(0x5559258bfbc0)
+[PlanManager::_writeMissionItemsWorker]TESTING UPLOAD [1] 
+[PlanManager::_writeMissionCount]send message on thread safe [1] 
+	 message:  255  |  190  |  1  |  0x7ffd45733420  |  1  |  1  |  4  |  0 
+[PlanManager::writeMissionItems]TESTING UPLOAD [1] 
+[PlanManager::_writeMissionItemsWorker]TESTING UPLOAD [1] 
+[PlanManager::_writeMissionCount]send message on thread safe [1] 
+	 message:  255  |  190  |  1  |  0x7ffd45735800  |  1  |  1  |  0  |  1 	 
 	 
 	 
 
