@@ -1,0 +1,4 @@
+module custom.PlanView
+
+CustomPlanView          1.0 CustomPlanView.qml
+CustomSimpleItemEditor  1.0 CustomSimpleItemEditor.qml

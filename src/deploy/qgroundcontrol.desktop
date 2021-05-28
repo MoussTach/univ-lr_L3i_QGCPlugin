@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=L3i QGroundControl
+GenericName=Ground Control Station
+Comment=UAS ground control station, customized by BRENCKLE Gaetan for the company L3i
+Icon=CustomAppIcon
+Exec=qgroundcontrol-start.sh
+Terminal=false
+Categories=Utility;

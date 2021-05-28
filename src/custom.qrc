@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="custom/img">
+        <file alias="CustomAppIcon.png">res/Images/CustomL3i_AppIcon.png</file>
+    </qresource>
+    <qresource prefix="/qml">
+        <file alias="PlanView.qml">res/PlanView/CustomPlanView.qml</file>
+        <file alias="SimpleItemEditor.qml">res/PlanView/CustomSimpleItemEditor.qml</file>
+    </qresource>
+</RCC>
