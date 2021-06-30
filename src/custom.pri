@@ -60,9 +60,14 @@ QML_IMPORT_PATH += \
 # Our own, custom sources
 SOURCES += \
     $$PWD/src/CustomPlugin.cc \
+    $$PWD/src/simpleItemEditor/DiveMission_TableModel.cpp \
+    $$PWD/src/simpleItemEditor/DiveMission_data.cpp \
 
 HEADERS += \
     $$PWD/src/CustomPlugin.h \
+    $$PWD/src/FileIO.h \
+    $$PWD/src/simpleItemEditor/DiveMission_TableModel.h \
+    $$PWD/src/simpleItemEditor/DiveMission_data.h \
 
 INCLUDEPATH += \
     $$PWD/src \

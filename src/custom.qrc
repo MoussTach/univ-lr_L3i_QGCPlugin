@@ -4,6 +4,10 @@
     </qresource>
     <qresource prefix="/qml">
         <file alias="PlanView.qml">res/PlanView/CustomPlanView.qml</file>
-        <file alias="SimpleItemEditor.qml">res/PlanView/CustomSimpleItemEditor.qml</file>
+
+        <file alias="SimpleItemEditor.qml">res/PlanView/simpleItemEditor/CustomItem_DiveMission.qml</file>
+        <file alias="CustomWindow_DiveMission.qml">res/PlanView/simpleItemEditor/CustomWindow_DiveMission.qml</file>
+        <file alias="CustomChooser_DiveMission.qml">res/PlanView/simpleItemEditor/CustomChooser_DiveMission.qml</file>
+        <file alias="RealSimpleItemEditor.qml">../src/PlanView/SimpleItemEditor.qml</file>
     </qresource>
 </RCC>

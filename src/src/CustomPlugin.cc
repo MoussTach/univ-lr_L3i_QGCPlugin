@@ -12,6 +12,7 @@
 #include <QtQml>
 #include <QQmlEngine>
 #include <QDateTime>
+#include <QScopedPointer>
 #include "QGCSettings.h"
 #include "MAVLinkLogManager.h"
 
@@ -23,6 +24,10 @@
 #include "AppMessages.h"
 #include "QmlComponentInfo.h"
 #include "QGCPalette.h"
+
+#include "FileIO.h"
+#include "simpleItemEditor/DiveMission_TableModel.h"
+#include "simpleItemEditor/DiveMission_data.h"
 
 QGC_LOGGING_CATEGORY(CustomLog, "CustomLog")
 
@@ -279,7 +284,13 @@ void CustomPlugin::paletteOverride(QString colorName, QGCPalette::PaletteColorIn
 // We override this so we can get access to QQmlApplicationEngine and use it to register our qml module
 QQmlApplicationEngine  *CustomPlugin::createQmlApplicationEngine(QObject* parent) {
     QQmlApplicationEngine *qmlEngine = QGCCorePlugin::createQmlApplicationEngine(parent);
-    //qmlEngine->addImportPath("qrc:/Custom/Widgets");
+
+    FileIO fileIO;
+    qmlEngine->rootContext()->setContextProperty("fileio", &fileIO);
+
+    DiveMission_data diveMissionData;
+    qmlRegisterType<DiveMission_TableModel>("DiveMissionModel", 1, 0, "DiveMissionModel");
+    qmlEngine->rootContext()->setContextProperty(QStringLiteral("diveMissionData"), &diveMissionData);
     return qmlEngine;
 }
 
