@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/qgroundcontrol" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/qgroundcontrol/libs/OpenSSL/android_openssl" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/qgroundcontrol/libs/mavlink/include/mavlink/v2.0" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/qgroundcontrol/libs/qmlglsink/gst-plugins-good" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/qgroundcontrol/src/GPS/Drivers" vcs="Git" />
+  </component>
+</project>
